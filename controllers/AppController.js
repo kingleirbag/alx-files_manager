@@ -13,7 +13,7 @@ class AppController {
    *
    * @param {Object} req - The request object (not used in this method).
    * @param {Object} res - The response object used to send back the status.
-   * @returns {Promise<void>} - A promise that resolves when the response is sent.
+   * @returns {Promise<void>} - A promise resolves when the response is sent.
    */
   static async getStatus(req, res) {
     const redisIsAlive = redisClient.isAlive();
@@ -27,9 +27,9 @@ class AppController {
    * This method retrieves the number of users and files from the database
    * and responds with these statistics.
    *
-   * @param {Object} req - The request object (not used in this method).
-   * @param {Object} res - The response object used to send back the statistics.
-   * @returns {Promise<void>} - A promise that resolves when the response is sent.
+   * @param {Object} req - request object (not used in this method).
+   * @param {Object} res - response object used to send back the statistics.
+   * @returns {Promise<void>} - promise resolves when the response is sent.
    */
   static async getStats(req, res) {
     const usersCount = await dbClient.nbUsers();

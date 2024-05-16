@@ -38,3 +38,4 @@ userQueue.process(async (job, done) => {
   console.log(`Welcome ${user.email}`);
   done();
 });
+
